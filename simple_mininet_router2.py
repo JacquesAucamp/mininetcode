@@ -32,8 +32,8 @@ class Net_Topology(Topo):
         self.addLink(s2, router, intfName2 = 'ro-eth1', params2 = {'ip' : '10.0.0.1/8'})
         
         #add hosts
-        h1 = self.addHost('h1', 'ip' = '192.168.1.50/24', defaultRoute = 'via 192.168.1.1')
-        h2 = self.addHost('h2', 'ip' = '10.0.0.50/8', defaultRoute = 'via 10.0.0.1')
+        h1 = self.addHost('h1', ip = '192.168.1.50/24', defaultRoute = 'via 192.168.1.1')
+        h2 = self.addHost('h2', ip = '10.0.0.50/8', defaultRoute = 'via 10.0.0.1')
         
         #add links between hosts and switches
         for h, s in [ (h1, s1), (h2, s2) ]:
