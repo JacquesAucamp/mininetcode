@@ -41,7 +41,7 @@ class Net_Topology(Topo):
             
 def run():
     "Test router"
-    topo = NetworkTopo()
+    topo = Net_Topology()
     net = Mininet( topo=topo,
                    waitConnected=True )  # controller is used by s1-s3
     net.start()
