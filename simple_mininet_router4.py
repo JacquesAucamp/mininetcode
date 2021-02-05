@@ -9,12 +9,12 @@ class Router(Node):
     
     #Router configuration
     def config(self, **params):                      
-        super( LinuxRouter, self).config( **params )
+        super( Router, self).config( **params )
         self.cmd('sysctl net.ipv4.ip_forward=1')      #enables port forwarding on the router node
         
     def terminate(self):
         self.cmd('sysctl net.ipv4.ip_forward=0')
-        super( LinuxRouter, self ).terminate()
+        super( Router, self ).terminate()
         
 class Net_Topology(Topo):
     "Router connects to 2 subnets (hosts) "
