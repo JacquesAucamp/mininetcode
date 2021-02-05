@@ -16,7 +16,7 @@ class Router(Node):
         self.cmd('sysctl net.ipv4.ip_forward=0')
         super( LinuxRouter, self ).terminate()
         
- class Net_Topology(Topo):
+class Net_Topology(Topo):
     "Router connects to 2 subnets (hosts) "
     
     def build(self, k = 2):
@@ -39,7 +39,7 @@ class Router(Node):
         for h, s in [ (h1, s1), (h2, s2) ]:
             self.addLink( h, s )
             
- def run():
+def run():
     "Test router"
     topo = NetworkTopo()
     net = Mininet( topo=topo,
@@ -49,7 +49,6 @@ class Router(Node):
     info( net[ 'r0' ].cmd( 'route' ) )
     CLI( net )
     net.stop()
-
 
 if __name__ == '__main__':
     setLogLevel( 'info' )
