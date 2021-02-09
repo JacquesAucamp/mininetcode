@@ -44,9 +44,9 @@ class Net_Topology(Topo):
         
         #add links between hosts and switches
         #add adjustable performance link
-        link1 = net.addLink(h1, s1, cls = TCLink)
+        link1 = self.addLink(h1, s1, cls = TCLink)
         #add normal link
-        net.addLink(h2, s1)
+        self.addLink(h2, s1)
         
 def run():
     "Test router"
