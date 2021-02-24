@@ -145,11 +145,13 @@ def random_normal_number(low, high):
 
 def generate_traf_flows(id,duration,net):
 
-    hosts = net.hosts
+    hosts_1 = [net['h1'],net['h1_2'],net['h1_3']]
+    hosts_2 = [net['h2'],net['h2_2'],net['h2_3']]
     
     ### Select a random source and destination ###
-    src_end_points = random.sample(hosts,2)
-    src = net.get(str(src_end_points[0]))
+    src1_end_points = random.sample(hosts_1,2)
+    src2_end_points = random.sample(hosts_2,2)
+    src1 = net.get(str(src1_end_points[0]))
     dst = net['r0']
     
     ### Select Connection Parameters ###
@@ -183,7 +185,7 @@ def generate_traf_flows(id,duration,net):
     
     ### send the cmd ###
     dst.cmdPrint(server_cmd)
-    src.cmdPrint(client_cmd)
+    src1.cmdPrint(client_cmd)
     
 def generate_flows(n_elephant_flows, duration, net):
     interval = duration / n_elephant_flows
