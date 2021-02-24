@@ -225,17 +225,18 @@ def generate_flows(n_elephant_flows, duration, net):
     
     ### Generate flows based on above times ###
     count = 0
-    if count == 0:
-        count += 1
-        for i in range(n_elephant_flows):
+    for i in range(n_elephant_flows):
+        if count == 0:
+            count += 1
             if i == 0:
                 time.sleep(flow_start_time[i])
             else:
                 time.sleep(flow_start_time[i] - flow_start_time[i-1])
             if flow_type[i] == 'E':
                 generate_traf_flows(i, flow_duration[i], net)
-    elif count != 0:
-        break
+        elif count != 0:
+            break
+
         
     ### Sleep for rest of duration ###
     remaining_duration = duration - flow_start_time[-1]
