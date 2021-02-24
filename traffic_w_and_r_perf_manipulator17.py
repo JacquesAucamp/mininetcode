@@ -148,9 +148,9 @@ def generate_traf_flows(id,duration,net):
     hosts = net.hosts
     
     ### Select a random source and destination ###
-    end_points = random.sample(hosts,2)
-    src = net.get(str(end_points[0]))
-    dst = net.get(str(end_points[1]))
+    src_end_points = random.sample(hosts,2)
+    src = net.get(str(src_end_points[0]))
+    dst = net['r0']
     
     ### Select Connection Parameters ###
     protocol = random.choice(protocol_list)                     #Choose random protocol from above list
