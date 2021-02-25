@@ -78,10 +78,10 @@ random_delay = random.sample(delays_list,6)
 random_loss = random.sample(losses_list,6)
 random_jitter = random.sample(jitter_list,6)
 
-print("The Link Bandwidths are: %d, %d, %d, %d, %d, %d" %(random_bw[0],random_bw[1],random_bw[2],random_bw[3],random_bw[4],random_bw[5])
-print("The Link Delays are: %s, %s, %s, %s, %s, %s" %(random_delay[0],random_delay[1],random_delay[2],random_delay[3],random_delay[4],random_delay[5])
-print("The Link Losses are: %d, %d, %d, %d, %d, %d" %(random_loss[0],random_loss[1],random_loss[2],random_loss[3],random_loss[4],random_loss[5])
-print("The Link Jitters are: %s, %s, %s, %s, %s, %s" %(random_jitter[0],random_jitter[1],random_jitter[2],random_jitter[3],random_jitter[4],random_jitter[5])
+print("The Link Bandwidths are: %d, %d, %d, %d, %d, %d" %(random_bw[0],random_bw[1],random_bw[2],random_bw[3],random_bw[4],random_bw[5]))
+print("The Link Delays are: %s, %s, %s, %s, %s, %s" %(random_delay[0],random_delay[1],random_delay[2],random_delay[3],random_delay[4],random_delay[5]))
+print("The Link Losses are: %d, %d, %d, %d, %d, %d" %(random_loss[0],random_loss[1],random_loss[2],random_loss[3],random_loss[4],random_loss[5]))
+print("The Link Jitters are: %s, %s, %s, %s, %s, %s" %(random_jitter[0],random_jitter[1],random_jitter[2],random_jitter[3],random_jitter[4],random_jitter[5]))
 
 #=============================================================================
 
