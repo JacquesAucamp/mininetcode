@@ -352,60 +352,84 @@ def performance_reader():
     print('Link 1:')
     print('   The percentage packet loss is: %d' %link1_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link1_int_avg_rtt)
-    if link1_int_received_pack_perc >= 75 or link1_int_avg_rtt < 25:
+    if link1_int_received_pack_perc <= 25 and link1_int_avg_rtt < 25:
         print('   Link 1 is above average and is performing effectively \n')
-    elif link1_int_received_pack_perc > 50 and link1_int_received_pack_perc < 75 or link1_int_avg_rtt < 50:
+    elif link1_int_received_pack_perc < 50 and link1_int_received_pack_perc > 25 or link1_int_avg_rtt < 100:
         print('   Link 1 is average and will perform sufficiently. Consider network improvement \n')
+    elif link1_int_received_pack_perc < 50 and link1_int_received_pack_perc > 25 or link1_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 1 is average and will perform sufficiently. Consider network improvement \n')
+    elif link1_int_received_pack_perc < 75 and link1_int_received_pack_perc >= 50 or link1_int_avg_rtt < 100:
+        print('   Link 1 is below average and serious improvements need to be made \n')
     else:
         print('   Link 1 is below average and serious improvements need to be made \n')
 
     print('Link 2:')
     print('   The percentage packet loss is: %d' %link2_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link2_int_avg_rtt)
-    if link2_int_received_pack_perc >= 75 or link2_int_avg_rtt < 25:
+    if link2_int_received_pack_perc <= 25 and link2_int_avg_rtt < 25:
         print('   Link 2 is above average and is performing effectively \n')
-    elif link2_int_received_pack_perc > 50 and link2_int_received_pack_perc < 75 or link2_int_avg_rtt < 50:
+    elif link2_int_received_pack_perc < 50 and link2_int_received_pack_perc > 25 or link2_int_avg_rtt < 100:
         print('   Link 2 is average and will perform sufficiently. Consider network improvement \n')
+    elif link2_int_received_pack_perc < 50 and link2_int_received_pack_perc > 25 or link2_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 2 is average and will perform sufficiently. Consider network improvement \n')
+    elif link2_int_received_pack_perc < 75 and link2_int_received_pack_perc >= 50 or link2_int_avg_rtt < 100:
+        print('   Link 2 is below average and serious improvements need to be made \n')
     else:
         print('   Link 2 is below average and serious improvements need to be made \n')
 
     print('Link 3:')
     print('   The percentage packet loss is: %d' %link3_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link3_int_avg_rtt)
-    if link3_int_received_pack_perc >= 75 or link3_int_avg_rtt < 25:
+    if link3_int_received_pack_perc <= 25 and link3_int_avg_rtt < 25:
         print('   Link 3 is above average and is performing effectively \n')
-    elif link3_int_received_pack_perc > 50 and link3_int_received_pack_perc < 75 or link3_int_avg_rtt < 50:
+    elif link3_int_received_pack_perc < 50 and link3_int_received_pack_perc > 25 or link3_int_avg_rtt < 100:
         print('   Link 3 is average and will perform sufficiently. Consider network improvement \n')
+    elif link3_int_received_pack_perc < 50 and link3_int_received_pack_perc > 25 or link3_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 3 is average and will perform sufficiently. Consider network improvement \n')
+    elif link3_int_received_pack_perc < 75 and link3_int_received_pack_perc >= 50 or link3_int_avg_rtt < 100:
+        print('   Link 3 is below average and serious improvements need to be made \n')
     else:
         print('   Link 3 is below average and serious improvements need to be made \n')
 
     print('Link 4:')
     print('   The percentage packet loss is: %d' %link4_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link4_int_avg_rtt)
-    if link4_int_received_pack_perc >= 75 or link4_int_avg_rtt < 25:
+    if link4_int_received_pack_perc <= 25 and link4_int_avg_rtt < 25:
         print('   Link 4 is above average and is performing effectively \n')
-    elif link4_int_received_pack_perc > 50 and link4_int_received_pack_perc < 75 or link4_int_avg_rtt < 50:
+    elif link4_int_received_pack_perc < 50 and link4_int_received_pack_perc > 25 or link4_int_avg_rtt < 100:
         print('   Link 4 is average and will perform sufficiently. Consider network improvement \n')
+    elif link4_int_received_pack_perc < 50 and link4_int_received_pack_perc > 25 or link4_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 4 is average and will perform sufficiently. Consider network improvement \n')
+    elif link4_int_received_pack_perc < 75 and link4_int_received_pack_perc >= 50 or link4_int_avg_rtt < 100:
+        print('   Link 4 is below average and serious improvements need to be made \n')
     else:
         print('   Link 4 is below average and serious improvements need to be made \n')
 
     print('Link 5:')
     print('   The percentage packet loss is: %d' %link5_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link5_int_avg_rtt)
-    if link5_int_received_pack_perc >= 75 or link5_int_avg_rtt < 25:
+    if link5_int_received_pack_perc <= 25 and link5_int_avg_rtt < 25:
         print('   Link 5 is above average and is performing effectively \n')
-    elif link5_int_received_pack_perc > 50 and link5_int_received_pack_perc < 75 or link5_int_avg_rtt < 50:
+    elif link5_int_received_pack_perc < 50 and link5_int_received_pack_perc > 25 or link5_int_avg_rtt < 100:
         print('   Link 5 is average and will perform sufficiently. Consider network improvement \n')
+    elif link5_int_received_pack_perc < 50 and link5_int_received_pack_perc > 25 or link5_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 5 is average and will perform sufficiently. Consider network improvement \n')
+    elif link5_int_received_pack_perc < 75 and link5_int_received_pack_perc >= 50 or link5_int_avg_rtt < 100:
+        print('   Link 5 is below average and serious improvements need to be made \n')
     else:
         print('   Link 5 is below average and serious improvements need to be made \n')
 
     print('Link 6:')
     print('   The percentage packet loss is: %d' %link6_int_received_pack_perc)
     print('   The average RTT is: %.3f ms' %link6_int_avg_rtt)
-    if link6_int_received_pack_perc >= 75 or link6_int_avg_rtt < 25:
+    if link6_int_received_pack_perc <= 25 and link6_int_avg_rtt < 25:
         print('   Link 6 is above average and is performing effectively \n')
-    elif link6_int_received_pack_perc > 50 and link6_int_received_pack_perc < 75 or link6_int_avg_rtt < 50:
+    elif link6_int_received_pack_perc < 50 and link6_int_received_pack_perc > 25 or link6_int_avg_rtt < 100:
         print('   Link 6 is average and will perform sufficiently. Consider network improvement \n')
+    elif link6_int_received_pack_perc < 50 and link6_int_received_pack_perc > 25 or link6_int_avg_rtt >= 100 and link1_int_avg_rtt <200:
+        print('   Link 6 is average and will perform sufficiently. Consider network improvement \n')
+    elif link6_int_received_pack_perc < 75 and link6_int_received_pack_perc >= 50 or link6_int_avg_rtt < 100:
+        print('   Link 6 is below average and serious improvements need to be made \n')
     else:
         print('   Link 6 is below average and serious improvements need to be made \n')
 #==================================================================================================
